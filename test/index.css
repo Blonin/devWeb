@@ -99,18 +99,22 @@ li{
 }
 
 .armure{
-    background-image: url(armure.jpg);
+    background-image: url(component/img/armure/armure.jpg);
 }
 .bouclier{
-    background-image: url(Bouclier-1.png);
+    background-image: url(component/img/bouclier/Bouclier-1.png);
 }
 .spear{
-    background-image: url(spear1.png);
+    background-image: url(component/img/spear/spear1.png);
 }
 .sword{
-    background-image: url(sword1.png);
+    background-image: url(component/img/sword/sword1.png);
 }
 
+
+/*--------------------------------------------------------------
+# Animation bg bougeant
+--------------------------------------------------------------*/
 
 @keyframes pan-image {
     0%{
@@ -154,6 +158,10 @@ li{
         background-size: 600%;
     }
 }
+
+/*--------------------------------------------------------------
+# animation de l'overlay
+--------------------------------------------------------------*/
 
 .overlay{
     position: absolute;
@@ -215,6 +223,27 @@ li{
     top: 0px;
     width: 100%;
     height: 100%;
+}
+
+
+/*--------------------------------------------------------------
+# container
+--------------------------------------------------------------*/
+
+.container {
+    display: flex;
+    width: 100%;
+}
+
+.item {
+    display: flex;
+    max-width: 25%;
+    background-color: red;
+
+}
+
+.item img{
+    
 }
 
 /*--------------------------------------------------------------
