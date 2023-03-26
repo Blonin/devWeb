@@ -1,0 +1,331 @@
+* {
+    padding: 0;
+    margin: 0;
+
+}
+
+:root {
+    --primary: rgba(0, 0, 0, 0.5);
+    --secondary: rgba(75, 75, 75, 0.5);
+    --button : rgba(158, 145, 145, 0.9);
+    font-weight: 900;    
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+body {
+    background-color: black;
+    color: white;
+}
+
+button{
+    background-color: var(--button);
+}
+
+
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+
+nav {
+    text-transform: uppercase;
+    display: flex;
+    background-color: black;
+    text-align: center;
+    height: 5rem;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+        transform: translateY(-20%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+svg{
+    stroke: white;
+}
+
+ul {
+    display: flex;
+    text-align: center;
+    list-style: none;
+}
+
+li{
+    padding: 0rem 1rem;
+    font-size: large;
+}
+
+
+
+/*--------------------------------------------------------------
+# Vitrine
+--------------------------------------------------------------*/
+
+.vitrine {
+    display: flex;
+    width: 100%;
+}
+
+.screen {
+    min-width: 20%;
+    background-color: rgba(0, 0, 0, 0.2);
+    margin: 20px 0.5%;
+    min-height: 500px;
+    border-radius: 1rem;
+    overflow: hidden;
+    position: relative;
+    flex-grow: 1;
+}
+
+.screen-image{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-size: 300%;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: sepia(100%) hue-rotate(160deg);
+
+    animation: pan-image 25s linear infinite;
+
+}
+
+.armure{
+    background-image: url(component/img/armure/armure.jpg);
+}
+.bouclier{
+    background-image: url(component/img/bouclier/Bouclier-1.png);
+}
+.spear{
+    background-image: url(component/img/spear/spear1.png);
+}
+.sword{
+    background-image: url(component/img/sword/sword1.png);
+}
+
+
+/*--------------------------------------------------------------
+# Animation bg bougeant
+--------------------------------------------------------------*/
+
+@keyframes pan-image {
+    0%{
+        background-position: 0% 0%;
+        background-size: 200%;
+    }
+    20% {
+        background-position: 30% 50%;
+        background-size: 350%;
+    }
+    20.0001%{
+        background-position: 80% 12%;
+        background-size: 500%;
+    }
+    40%{
+        background-position: 44% 32%;
+        background-size: 300%;
+    }
+    40.0001%{
+        background-position: 55% 63%;
+        background-size: 250%;
+    }
+    60%{
+        background-position: 14% 41%;
+        background-size: 250%;
+    }
+    60.0001%{
+        background-position: 9% 23%;
+        background-size: 400%;
+    }
+    80%{
+        background-position: 31% 41%;
+        background-size: 400%;
+    }
+    80.0001%{
+        background-position: 65% 35%;
+        background-size: 350%;
+    }
+    100%{
+        background-position: 89% 79%;
+        background-size: 600%;
+    }
+}
+
+/*--------------------------------------------------------------
+# animation de l'overlay
+--------------------------------------------------------------*/
+
+.overlay{
+    position: absolute;
+    z-index: 2;
+    left: 0px;
+    top: 0px;
+    background: linear-gradient(
+        var(--primary),
+        var(--primary) 3px, 
+        var(--secondary) 3px,
+        var(--secondary) 9px
+    );
+    background-size: 100% 9px;
+    height: 100%;
+    width: 100%;
+    animation: pan-overlay 22s infinite linear;
+}
+
+@keyframes pan-overlay{
+    from {
+        background-position: 0% 0%;
+    }
+    to {
+        background-position: 0% -100%;
+    }
+}
+
+.store {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.store::after{
+    position: absolute;
+    background-color: black;
+    width: 100%;
+    content: '';
+    height: 100%;
+    animation: storeFadeout 2s ease-in-out forwards; 
+}
+
+
+@keyframes storeFadeout{
+    0%{
+        transform: translateY(0%);
+    }
+    100%{
+        transform: translateY(-100%);
+    }
+}
+
+.screen a {
+    position: absolute;
+    z-index: 3;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+
+/*--------------------------------------------------------------
+# container
+--------------------------------------------------------------*/
+
+.container {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+
+
+.item {
+    display: flex;
+    max-width: 20%;
+    min-width: 180px;
+    background-color: var(--secondary);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 5px;
+    flex-direction: column;
+    min-height: 400px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item img{
+    max-width: 100%;
+
+}
+
+.item .sub{
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.item button{
+    padding: 3px;
+    border-radius: 15px;
+    border-color: aliceblue ;
+    background-color: rgba(0, 0, 0, 0);
+    border-width: 1px;
+    color: white;
+}
+
+.affichage {
+    margin-left: 5%;
+    border-radius: 10px;
+    border-width: 1px;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0);
+    color: aliceblue;
+}
+
+/*--------------------------------------------------------------
+# form
+--------------------------------------------------------------*/
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--secondary);
+    padding: 10px;
+    border-radius: 20px;
+}
+
+form .genre {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 100%;
+}
+
+form .contact-form{
+    padding: 5px;
+    width: 100%;
+}
+
+/*--------------------------------------------------------------
+# footer
+--------------------------------------------------------------*/
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 2rem;
+}
+
+
