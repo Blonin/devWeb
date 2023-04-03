@@ -12,14 +12,14 @@
     <nav>
         
         <ul>
-            <li><a href="sword.html"> Sword </a> </li>
-            <li><a href="spear.html"> Spear</a> </li>
-            <li><a href="shield.html"> Shield</a> </li>
-            <li><a href="armor.html"> Armor</a> </li>
+            <li><a href="sword.php"> Sword </a> </li>
+            <li><a href="spear.php"> Spear</a> </li>
+            <li><a href="shield.php"> Shield</a> </li>
+            <li><a href="armor.php"> Armor</a> </li>
         </ul>
 
         <div class="name">
-            <a href="../index.html">
+            <a href="../index.php">
                 <strong>Blonin's</strong>
                 <span>Workshop</span>
             </a>
@@ -84,7 +84,7 @@
     
     </div>
     <footer>
-        <a href="contact.html">Contactez nous</a>
+        <a href="contact.php">Contactez nous</a>
     </footer>
 
 </body>

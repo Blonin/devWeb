@@ -1,3 +1,10 @@
+
+<?php
+
+include_once("php/sessions.php");
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,30 +17,16 @@
 </head>
 <body>
     
-    <nav>
-        
-        <ul>
-            <li><a href="sword.html"> Sword </a> </li>
-            <li><a href="spear.html"> Spear</a> </li>
-            <li><a href="shield.html"> Shield</a> </li>
-            <li><a href="armor.html"> Armor</a> </li>
-        </ul>
+<?php
 
-        <div class="name">
-            <a href="../index.html">
-                <strong>Blonin's</strong>
-                <span>Workshop</span>
-            </a>
-        </div>
+include_once("../php/nav.php");
 
-        <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M7 8V6a5 5 0 1 1 10 0v2h3a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1h3zm0 2H5v10h14V10h-2v2h-2v-2H9v2H7v-2zm2-2h6V6a3 3 0 0 0-6 0v2z"/></svg>
-    
-    </nav>
+?>
+
 
     <div class="container">
-
         <div class="item">
-            <img src="../component/img/armure/armure.jpg" alt="épée">
+            <img src="../component/img/bouclier/bouclier5.png" alt="épée">
             <p>
                 épée longue <br>
                 Prix 189.99€
@@ -48,9 +41,9 @@
             </div>
             <div class="stock" style="display: none;">stock : 10</div>
         </div>
-
+        
         <div class="item">
-            <img src="../component/img/armure/armor3.png" alt="épée">
+            <img src="../component/img/bouclier/Bouclier2.png" alt="épée">
             <p>
                 épée longue <br>
                 Prix 189.99€
@@ -67,7 +60,7 @@
         </div>
 
         <div class="item">
-            <img src="../component/img/armure/armure3.jpg" alt="épée">
+            <img src="../component/img/bouclier/Bouclier3.png" alt="épée">
             <p>
                 épée longue <br>
                 Prix 189.99€
@@ -84,7 +77,7 @@
         </div>
 
         <div class="item">
-            <img src="../component/img/armure/armor2.webp" alt="épée">
+            <img src="../component/img/bouclier/bouclier4.webp" alt="épée">
             <p>
                 épée longue <br>
                 Prix 189.99€
@@ -105,7 +98,7 @@
     <button class="affichage" onclick="display()">Afficher le stock</button>
 
     <footer>
-        <a href="contact.html">Contactez nous</a>
+        <a href="contact.php">Contactez nous</a>
     </footer>
 
     <script src="../component/js/tp.js"></script>
