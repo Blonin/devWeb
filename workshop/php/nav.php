@@ -1,13 +1,13 @@
 <nav>
     <ul>
-        <li><a href="../pages/sword.php"> Sword </a> </li>
-        <li><a href="../pages/spear.php"> Spear</a> </li>
-        <li><a href="../pages/shield.php"> Shield</a> </li>
-        <li><a href="../pages/armor.php"> Armor</a> </li>
+        <li><a href="/pages/sword.php"> Sword </a> </li>
+        <li><a href="/pages/spear.php"> Spear</a> </li>
+        <li><a href="/pages/shield.php"> Shield</a> </li>
+        <li><a href="/pages/armor.php"> Armor</a> </li>
     </ul>
 
     <div class="name">
-        <a href="devWeb/workshop/index.php">
+        <a href="/index.php">
             <strong>Blonin's</strong>
             <span>Workshop</span>
         </a>

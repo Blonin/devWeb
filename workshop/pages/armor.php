@@ -27,83 +27,93 @@ include_once("../php/session.php");
 
 
     <div class="container">
-
+                
         <div class="item">
-            <img src="../component/img/armure/armure.jpg" alt="épée">
-            <p>
-                épée longue <br>
-                Prix 189.99€
+        <img src="../component/img/armure/armure.jpg" alt="épée">
+        <p>
+            épée longue <br>
+            Prix 189.99€
+        </p>
+        <div class="sub">
+            <button class="ajout" id="buttonPlus" onclick="ajout('object1',10)">+</button>
+            <p id="object1">
+                0
             </p>
-            <div class="sub">
-                <button class="ajout" id="buttonPlus" onclick="ajout('object1',10)">+</button>
-                <p id="object1">
-                    0
-                </p>
-                <button class="ajout" id="buttonMoins" onclick="moins('object1',10)">-</button>
-                <button class="panier">Ajouter au panier</button>
-            </div>
-            <div class="stock" style="display: none;">stock : 10</div>
+            <button class="ajout" id="buttonMoins" onclick="moins('object1',10)">-</button>
+            <button class="panier">Ajouter au panier</button>
+        </div>
+        <div class="stock" style="display: none;">stock : 10</div>
         </div>
 
         <div class="item">
-            <img src="../component/img/armure/armor3.png" alt="épée">
-            <p>
-                épée longue <br>
-                Prix 189.99€
+        <img src="../component/img/armure/armor3.png" alt="épée">
+        <p>
+            épée longue <br>
+            Prix 189.99€
+        </p>
+        <div class="sub">
+            <button class="ajout" id="buttonPlus" onclick="ajout('object2',5)">+</button>
+            <p id="object2">
+                0
             </p>
-            <div class="sub">
-                <button class="ajout" id="buttonPlus" onclick="ajout('object2',5)">+</button>
-                <p id="object2">
-                    0
-                </p>
-                <button class="ajout" id="buttonMoins" onclick="moins('object2',5)">-</button>
-                <button class="panier">Ajouter au panier</button>
-            </div>
-            <div class="stock" style="display: none;">stock : 5</div>
+            <button class="ajout" id="buttonMoins" onclick="moins('object2',5)">-</button>
+            <button class="panier">Ajouter au panier</button>
+        </div>
+        <div class="stock" style="display: none;">stock : 5</div>
         </div>
 
         <div class="item">
-            <img src="../component/img/armure/armure3.jpg" alt="épée">
-            <p>
-                épée longue <br>
-                Prix 189.99€
+        <img src="../component/img/armure/armure3.jpg" alt="épée">
+        <p>
+            épée longue <br>
+            Prix 189.99€
+        </p>
+        <div class="sub">
+            <button class="ajout" id="buttonPlus" onclick="ajout('object3',7)">+</button>
+            <p id="object3">
+                0
             </p>
-            <div class="sub">
-                <button class="ajout" id="buttonPlus" onclick="ajout('object3',7)">+</button>
-                <p id="object3">
-                    0
-                </p>
-                <button class="ajout" id="buttonMoins" onclick="moins('object3',7)">-</button>
-                <button class="panier">Ajouter au panier</button>
-            </div>
-            <div class="stock" style="display: none;">stock : 7</div>
+            <button class="ajout" id="buttonMoins" onclick="moins('object3',7)">-</button>
+            <button class="panier">Ajouter au panier</button>
+        </div>
+        <div class="stock" style="display: none;">stock : 7</div>
         </div>
 
         <div class="item">
-            <img src="../component/img/armure/armor2.webp" alt="épée">
-            <p>
-                épée longue <br>
-                Prix 189.99€
+        <img src="../component/img/armure/armor2.webp" alt="épée">
+        <p>
+            épée longue <br>
+            Prix 189.99€
+        </p>
+        <div class="sub">
+            <button class="ajout" id="buttonPlus" onclick="ajout('object4',2)">+</button>
+            <p id="object4">
+                0
             </p>
-            <div class="sub">
-                <button class="ajout" id="buttonPlus" onclick="ajout('object4',2)">+</button>
-                <p id="object4">
-                    0
-                </p>
-                <button class="ajout" id="buttonMoins" onclick="moins('object4',2)">-</button>
-                <button class="panier" >Ajouter au panier</button>
-            </div>
-            <div class="stock" style="display: none;">stock : 2</div>
+            <button class="ajout" id="buttonMoins" onclick="moins('object4',2)">-</button>
+            <button class="panier" >Ajouter au panier</button>
+        </div>
+        <div class="stock" style="display: none;">stock : 2</div>
         </div>
 
     </div>
     
     <button class="affichage" onclick="display()">Afficher le stock</button>
 
+    <p class="demo">
+        doseeee
+    </div>
+    
+    
     <footer>
         <a href="contact.php">Contactez nous</a>
     </footer>
 
-    <script src="../component/js/tp.js"></script>
+    <script src="../component/js/tp.js">
+    </script>
+    <script>
+document.getElementById("demo").innerHTML =
+obj.armor[1].name + " " + obj.armor[1].price;
+</script>
 </body>
 </html>

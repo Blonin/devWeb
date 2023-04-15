@@ -1,5 +1,37 @@
-[
-    {
-        
-    }
-]
+{
+  "armor":[
+      {
+        "name": "Armure en fer brossé",
+        "description": "",
+        "image": "armure.jpg",
+        "price": "200",
+        "stock": "10"
+      },
+      {
+        "name": "Armure en fer brossé",
+        "description": "",
+        "image": "armure.jpg",
+        "price": "200",
+        "stock": "10"
+      },
+      {
+        "name": "Armure en fer brossé",
+        "description": "",
+        "image": "armure.jpg",
+        "price": "200",
+        "stock": "10"
+      },
+      {
+        "name": "Armure en fer brossé",
+        "description": "",
+        "image": "armure.jpg",
+        "price": "200",
+        "stock": "10"
+      }
+    ],
+    "sword":[
+      {
+        "name":"log sword"
+      }
+    ]
+}
