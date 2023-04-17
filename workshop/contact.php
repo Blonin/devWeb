@@ -1,8 +1,6 @@
 
 <?php
 
-include_once("../php/session.php");
-
 ?>
 
 <!DOCTYPE html>
@@ -16,15 +14,14 @@ include_once("../php/session.php");
 </head>
 <body>
     
-    
-<?php
 
-include_once("../php/nav.php");
+    <?php
+    include("php/nav.php")
+    ?>
 
-?>
     <div class="container">
 
-        <form action="" method="" >
+        <form action="process-contact.php" method="post" >
             <div class="contact-form style-input">
                 <input type="date" name="date" id="date" required>
                 <label for="date" class="perm-up">Date de naissance</label>
@@ -34,8 +31,8 @@ include_once("../php/nav.php");
                 <label for="firstname">Nom</label>
             </div>
             <div class="contact-form style-input">
-                <input type="text" name="name" id="surname" required>
-                <label for="name">Prénom</label>
+                <input type="text" name="surname" id="surname" required>
+                <label for="surname">Prénom</label>
             </div>
             <div class="contact-form style-input">
                 <input type="mail" name="mail" id="mail" required>
@@ -45,7 +42,7 @@ include_once("../php/nav.php");
                 <label for="gender">Genre : </label>
                 <div class="radio">
                     <label for="male">Homme</label>
-                    <input type="radio" name="gender" id="male" value="Male" checked>
+                    <input type="radio" name="gender" id="male" value="Male">
                 </div>
                 <div class="radio">
                     <label for="female">Femme</label>
@@ -53,7 +50,7 @@ include_once("../php/nav.php");
                 </div>
                 <div class="radio">
                     <label for="other">Autre</label>
-                    <input type="radio" name="gender" id="other" value="Other">
+                    <input type="radio" name="gender" id="other" value="Other" checked>
                 </div>
             </div>
             <div class="contact-form">

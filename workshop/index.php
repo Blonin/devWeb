@@ -1,7 +1,18 @@
 
 <?php
+    //start the session
+    session_start();
+    if (isset($_SESSION["user_id"])) {
 
-include_once("php/sessions.php");
+        $mysqli = require __DIR__."/database.php";
+
+        $query = "SELECT * FROM user WHERE id ={$_SESSION['user_id']}";
+        
+        $result = mysqli_query($mysqli,$query);
+
+        $user = mysqli_fetch_assoc($result);
+    
+    }
 
 ?>
 
@@ -55,7 +66,13 @@ include_once("php/sessions.php");
     <footer>
         <a href="php/contact.php">Contactez nous</a>
     </footer>
-
+        <?php if (isset($user)):?>
+            
+            <script>
+            
+                alert("Welcome <?= htmlspecialchars ($user['name'])  ?>");
+            </script>
+        <?php endif; ?>
     <script src="component/js/tp.js"></script>
 </body>
 </html>
