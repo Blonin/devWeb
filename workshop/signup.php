@@ -40,7 +40,7 @@
 
     </div>
     <footer>
-        <a href="contact.php">Contactez nous</a>
+        <a href="/contact.php">Contactez nous</a>
     </footer>
 
 </body>

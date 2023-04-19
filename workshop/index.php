@@ -64,7 +64,7 @@
     </div>  
 
     <footer>
-        <a href="php/contact.php">Contactez nous</a>
+        <a href="/contact.php">Contactez nous</a>
     </footer>
         <?php if (isset($user)):?>
             

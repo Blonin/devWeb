@@ -5,9 +5,9 @@ if (empty($_POST["user_name"])) {
     die("Name required");
 }
 
-if (strlen($_POST["password"]) < 8) {
+if (strlen($_POST["password"]) < 5) {
     # code...
-    die("Password must containts at least 8 character");
+    die("Password must containts at least 5 character");
 }
 
 if (!preg_match("/[a-z]/i",$_POST["password"])) {
@@ -36,11 +36,10 @@ if (! $stmt->prepare($query)){
 $stmt->bind_param("ss",$_POST["user_name"], $password_hash);
 
 if($stmt->execute()){
-    header("Location: signupsuccessful.php");
-
+    header("Location: /signupsuccessful.php");
 }else{
     if($mysqli->errno === 1062){
-        die("email already used");
+        die("name already used");
     }else{
         die($mysqli->error. " " . $mysqli->errno);
     }
