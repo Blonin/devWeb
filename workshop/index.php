@@ -1,7 +1,7 @@
 
 <?php
     //start the session
-    session_start();
+    include_once("../php/session.php");
     if (isset($_SESSION["user_id"])) {
 
         $mysqli = require __DIR__."/database.php";

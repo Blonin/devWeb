@@ -26,4 +26,3 @@ function display() {
     }
 }
 
-var obj = JSON.parse(text);

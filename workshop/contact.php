@@ -1,6 +1,8 @@
 
 <?php
 
+include_once("../php/session.php");
+
 ?>
 
 <!DOCTYPE html>
@@ -21,21 +23,21 @@
 
     <div class="container">
 
-        <form action="process-contact.php" method="post" >
+        <form action="/process-contact.php" method="post" >
             <div class="contact-form style-input">
-                <input type="date" name="date" id="date" required>
+                <input type="date" name="date" id="date" >
                 <label for="date" class="perm-up">Date de naissance</label>
             </div>
             <div class="contact-form style-input">
-                <input type="text" name="firstname" id="firstname" required>
+                <input type="text" name="firstname" id="firstname" >
                 <label for="firstname">Nom</label>
             </div>
             <div class="contact-form style-input">
-                <input type="text" name="surname" id="surname" required>
+                <input type="text" name="surname" id="surname" >
                 <label for="surname">Prénom</label>
             </div>
             <div class="contact-form style-input">
-                <input type="mail" name="mail" id="mail" required>
+                <input type="mail" name="mail" id="mail" >
                 <label for="mail">Email</label>
             </div>
             <div class="contact-form genre">

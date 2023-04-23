@@ -265,7 +265,7 @@ li{
 
 }
 
-.item .sub{
+.item .cart{
     display: flex;
     flex-direction: row;
     padding: 5px;
@@ -302,6 +302,8 @@ form {
     align-items: center;
     background-color: var(--secondary);
     padding: 10px;
+    justify-content: space-around;
+    width: 80%;
     border-radius: 20px;
 }
 
@@ -316,6 +318,7 @@ form .contact-form{
     padding: 5px;
     width: 100%;
 }
+
 
 /*--------------------------------------------------------------
 # footer

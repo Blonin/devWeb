@@ -2,6 +2,9 @@
 <?php
 
 include_once("php/sessions.php");
+$json_data =file_get_contents("../component/json/products.json");
+$products = json_decode($json_data,true);
+$sword = $products['sword'];
 
 ?>
 
@@ -26,73 +29,32 @@ include_once("php/sessions.php");
 
 
     <div class="container">
-        <div class="item">
-            <img src="../component/img/sword/sword5.webp" alt="épée">
-            <p>
-                épée longue <br>
-                Prix 189.99€
-            </p>
-            <div class="sub">
-                <button class="ajout" id="buttonPlus" onclick="ajout('object1',10)">+</button>
-                <p id="object1">
-                    0
-                </p>
-                <button class="ajout" id="buttonMoins" onclick="moins('object1',10)">-</button>
-                <button class="panier">Ajouter au panier</button>
-            </div>
-            <div class="stock" style="display: none;">stock : 10</div>
-        </div>
+        <?php 
+            if (count($sword)!= 0) {
+                foreach ($sword as $key) {
+                    ?>
+                    <div class="item">
+                    <img src="<?php echo $key['image'] ?>" alt="">
+                    <p>
+                        <?php echo $key['name'] ?> <br>
+                        <?php echo $key['price'] ?> €
+                    </p>
+                    <div class="sub">
+                        <button class="ajout" id="buttonPlus" onclick="ajout('<?php echo $key['id'] ?>',<?php echo $key['stock'] ?>)">+</button>
+                        <p id="<?php echo $key['id'] ?>">
+                            0
+                        </p>
+                        <button class="ajout" id="buttonMoins" onclick="moins('<?php echo $key['id'] ?>',<?php echo $key['stock'] ?>)">-</button>
+                        <button class="panier">Ajouter au panier</button>
+                    </div>
+                    <div class="stock" style="display: none;">stock : <?php echo $key['stock'] ?></div>
+                    </div>
 
-        <div class="item">
-            <img src="../component/img/sword/sword2.png" alt="épée">
-            <p>
-                épée longue <br>
-                Prix 189.99€
-            </p>
-            <div class="sub">
-                <button class="ajout" id="buttonPlus" onclick="ajout('object2',5)">+</button>
-                <p id="object2">
-                    0
-                </p>
-                <button class="ajout" id="buttonMoins" onclick="moins('object2',5)">-</button>
-                <button class="panier">Ajouter au panier</button>
-            </div>
-            <div class="stock" style="display: none;">stock : 5</div>
-        </div>
-
-        <div class="item">
-            <img src="../component/img/sword/sword3.png" alt="épée">
-            <p>
-                épée longue <br>
-                Prix 189.99€
-            </p>
-            <div class="sub">
-                <button class="ajout" id="buttonPlus" onclick="ajout('object3',7)">+</button>
-                <p id="object3">
-                    0
-                </p>
-                <button class="ajout" id="buttonMoins" onclick="moins('object3',7)">-</button>
-                <button class="panier">Ajouter au panier</button>
-            </div>
-            <div class="stock" style="display: none;">stock : 7</div>
-        </div>
-
-        <div class="item">
-            <img src="../component/img/sword/sword4.png" alt="épée">
-            <p>
-                épée longue <br>
-                Prix 189.99€
-            </p>
-            <div class="sub">
-                <button class="ajout" id="buttonPlus" onclick="ajout('object4',2)">+</button>
-                <p id="object4">
-                    0
-                </p>
-                <button class="ajout" id="buttonMoins" onclick="moins('object4',2)">-</button>
-                <button class="panier" >Ajouter au panier</button>
-            </div>
-            <div class="stock" style="display: none;">stock : 2</div>
-        </div>
+                    <?php
+                    
+                }
+            }
+        ?>
     </div>
 
     <button class="affichage" onclick="display()">Afficher le stock</button>
