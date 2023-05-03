@@ -1,5 +1,6 @@
 <?php
 
+
 //just regestering all the data send in the form in differents var
 $date =$_POST["date"];
 $firstname =$_POST["firstname"];
