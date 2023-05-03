@@ -35,7 +35,7 @@
     ],
     "sword":[
       {
-        "name": "Armure en fer brossé",
+        "name": "Sword",
         "description": "",
         "image": "/component/img/sword/sword5.webp",
         "price": "200",
@@ -43,7 +43,7 @@
         "id":"1"
       },
       {
-        "name": "Armure en fer brossé",
+        "name": "Sword",
         "description": "",
         "image": "/component/img/sword/sword2.png",
         "price": "200",
@@ -51,7 +51,7 @@
         "id":"2"
       },
       {
-        "name": "Armure en fer brossé",
+        "name": "Sword",
         "description": "",
         "image": "/component/img/sword/sword3.png",
         "price": "200",
