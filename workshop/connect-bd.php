@@ -98,7 +98,7 @@ if (mysqli_query($mysqli1,$sql)) {
         die("Error creating the table message".$mysqli->connect_errno);
     }
 
-
+//!\ les lignes a commenté sont ici
     $query =    //inserting firstly the armors then the swords, thirdly the spears and finishing by the shields
                 "INSERT INTO items
                 VALUES (1,'armor','Armure en fer brossé', ' ', '/component/img/armure/armure.jpg', '200', '5');
@@ -140,7 +140,7 @@ if (mysqli_query($mysqli1,$sql)) {
     if (!(mysqli_query($mysqli,$query))) {
         die("Error adding the items to the table".$mysqli->connect_errno);
     }
-
+ //!\ jusque là
 }
 
 
