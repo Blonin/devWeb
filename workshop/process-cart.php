@@ -1,7 +1,12 @@
 <?php
 
-
 include_once("../php/session.php");
+
+$mysqli1 = require __DIR__ . "/database.php";
+
+if($mysqli->connect_errno){
+    die("Connection error : ". $mysqli->connect_errno );
+}
 
 $quant =$_POST["quant"];
 $id = $_POST["id"];
@@ -19,20 +24,7 @@ foreach ($armor as $key ) {
     }
 }
 
-//user info phpmyadmin
-$host ="localhost";
-$dbname = "cart_db";
-$username = "root";
-$password = "";
-
-$mysqli = new mysqli($host,$username,$password,$dbname);
-
-if($mysqli->connect_errno){
-    die("Connection error : ". $mysqli->connect_errno );
-}
-
-
-$query = "INSERT INTO cart (name,quant) VALUES (?,?)";
+$query = "INSERT INTO cart (object,quant) VALUES (?,?)";
 
 
 //creating an object to send all the data, this will help us not get some sql injection

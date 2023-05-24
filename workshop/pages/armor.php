@@ -36,42 +36,39 @@ print_r($_SESSION['cart']);
                 if (count($armor)!= 0) {
                     foreach ($armor as $key) {
                         $j=$j+1;
-
-            ?>
-
-            <div class="item">
-            <img src="<?php echo $key['image'] ?>" alt="">
-            <p>
-                <?php echo $key['name'] ?> <br>
-                <?php echo $key['price'] ?> €
-            </p>
-                <form class="cart" method="post" action="/process-cart.php">
-                    <!-- inpun id to send 1 2 3 or 4 to later get the name-->
-                    <!-- and also the type that should change according to the pages of shop -->
-                    <input type="hidden" name="id" id="id" value="<?php echo $j ?>" >
-                    <input type="hidden" name="type" id="type" value="armor" >
-                    <?php echo $key['name']?>
-                    <label for="quant">Combien</label>
-                    <select id="quant" name="quant">
-                        <?php 
-                        for ($i=0; $i <= $key['stock']; $i++) { 
                         ?>
-                            <option value="<?php echo $i?>"><?php echo $i?></option>
+                        <div class="item">
+                            <img src="<?php echo $key['image'] ?>" alt="">
+                            <p>
+                                <?php echo $key['name'] ?> <br>
+                                <?php echo $key['price'] ?> €
+                            </p>
+                            <form class="cart" method="post" action="/process-cart.php">
+                                <!-- inpun id to send 1 2 3 or 4 to later get the name-->
+                                <!-- and also the type that should change according to the pages of shop -->
+                                <input type="hidden" name="id" id="id" value="<?php echo $j ?>" >
+                                <input type="hidden" name="type" id="type" value="armor" >
+                                <?php echo $key['name']?>
+                                <label for="quant">Combien</label>
+                                <select id="quant" name="quant">
+                                    <?php 
+                                    for ($i=0; $i <= $key['stock']; $i++) { 
+                                    ?>
+                                        <option value="<?php echo $i?>"><?php echo $i?></option>
+                                    <?php
+                                    }
+                                    ?>
+                                </select>
+
+                                <div class="cart-form" style="justify-content: center;">
+                                    <button type="submit" onclick="" style="min-width: 20%;" class="btn effect01" ><span>ADD</span></button>
+                                </div>
+                            </form>
+                            <div class="stock" style="display: none;">
+                                stock : <?php echo $key['stock'] ?>
+                            </div>   
+                        </div>
                         <?php
-                        }
-                        ?>
-                    </select>
-
-                    <div class="cart-form" style="justify-content: center;">
-                        <button type="submit" onclick="" style="min-width: 20%;" class="btn effect01" ><span>ADD</span></button>
-                    </div>
-                </form>
-            <div class="stock" style="display: none;">stock : <?php echo $key['stock'] ?></div>
-        
-        </div>
-
-            <?php
-            
                     }
                 }
             ?>

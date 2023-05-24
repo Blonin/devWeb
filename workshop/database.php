@@ -1,9 +1,11 @@
 <?php
 
+//should be used we trying to connect to the database
+//user info to connect to phpmyadmin
 $host ="localhost";
-$dbname = "login_db";
-$username = "root";
-$password = "";
+$dbname = "workshop";
+$username = "Gus";
+$password = "Gus2gus!";
 
 $mysqli = new mysqli($host,$username,$password,$dbname);
 

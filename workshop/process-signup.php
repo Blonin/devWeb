@@ -25,7 +25,7 @@ $password_hash = password_hash($_POST["password"],PASSWORD_DEFAULT);
 
 $mysqli = require __DIR__ . "/database.php";
 
-$query = "INSERT INTO user (name,password_hash) VALUES (?,?)";
+$query = "INSERT INTO users (name,password_hash) VALUES (?,?)";
 
 $stmt = $mysqli->stmt_init();
 

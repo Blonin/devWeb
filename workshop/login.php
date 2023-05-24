@@ -3,7 +3,7 @@
 $is_invalid = false;
     if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $mysqli = require __DIR__."/database.php";
-        $query = sprintf("SELECT * FROM user WHERE name ='%s'",
+        $query = sprintf("SELECT * FROM users WHERE name ='%s'",
                             $mysqli->real_escape_string($_POST["name"]));
         
         $result = mysqli_query($mysqli,$query);

@@ -34,22 +34,35 @@ $sword = $products['sword'];
                 foreach ($sword as $key) {
                     ?>
                     <div class="item">
-                    <img src="<?php echo $key['image'] ?>" alt="">
-                    <p>
-                        <?php echo $key['name'] ?> <br>
-                        <?php echo $key['price'] ?> €
-                    </p>
-                    <div class="sub">
-                        <button class="ajout" id="buttonPlus" onclick="ajout('<?php echo $key['id'] ?>',<?php echo $key['stock'] ?>)">+</button>
-                        <p id="<?php echo $key['id'] ?>">
-                            0
+                        <img src="<?php echo $key['image'] ?>" alt="">
+                        <p>
+                            <?php echo $key['name'] ?>   <?php echo $key['price'] ?> €
                         </p>
-                        <button class="ajout" id="buttonMoins" onclick="moins('<?php echo $key['id'] ?>',<?php echo $key['stock'] ?>)">-</button>
-                        <button class="panier">Ajouter au panier</button>
-                    </div>
-                    <div class="stock" style="display: none;">stock : <?php echo $key['stock'] ?></div>
-                    </div>
+                        <form class="cart" method="post" action="/process-cart.php">
+                            <!-- inpun id to send 1 2 3 or 4 to later get the name-->
+                            <!-- and also the type that should change according to the pages of shop -->
+                            <input type="hidden" name="id" id="id" value="<?php echo $j ?>" >
+                            <input type="hidden" name="type" id="type" value="sword" >
+                            <?php echo $key['name']?>
+                            <label for="quant">Combien</label>
+                            <select id="quant" name="quant">
+                                <?php 
+                                for ($i=0; $i <= $key['stock']; $i++) { 
+                                ?>
+                                    <option value="<?php echo $i?>"><?php echo $i?></option>
+                                <?php
+                                }
+                                ?>
+                            </select>
 
+                            <div class="cart-form" style="justify-content: center;">
+                                <button type="submit" onclick="" style="min-width: 20%;" class="btn effect01" ><span>ADD</span></button>
+                            </div>
+                        </form>
+                        <div class="stock" style="display: none;">
+                            stock : <?php echo $key['stock'] ?>
+                        </div>   
+                    </div>
                     <?php
                     
                 }

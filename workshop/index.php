@@ -6,7 +6,6 @@
 
     include_once("../php/session.php");
 
-
     if (isset($_SESSION["user_id"])) {
 
         $query = "SELECT * FROM user WHERE id ={$_SESSION['user_id']}";

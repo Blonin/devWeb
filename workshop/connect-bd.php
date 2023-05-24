@@ -9,11 +9,11 @@
 
 $host ="localhost";
 $dbname = "workshop";
-$username = "root";
-$password = "";
+$username = "Gus";
+$password = "Gus2gus!";
 
 //making a connection 
-$mysqli1 = new mysqli($jost,$username,$password);
+$mysqli1 = new mysqli($host,$username,$password);
 
 //checking connection
 if($mysqli1->connect_errno){
@@ -70,7 +70,7 @@ if (mysqli_query($mysqli1,$sql)) {
     $query = "CREATE TABLE IF NOT EXISTS 
                     users(  id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
                             name VARCHAR(128) NOT NULL,
-                            password_hash INT NOT NULL,
+                            password_hash VARCHAR(256) NOT NULL,
                             date DATETIME DEFAULT CURRENT_TIMESTAMP);";
     
     mysqli_query($mysqli,$query);
@@ -99,47 +99,49 @@ if (mysqli_query($mysqli1,$sql)) {
     }
 
 //!\ les lignes a commenté sont ici
-    $query =    //inserting firstly the armors then the swords, thirdly the spears and finishing by the shields
-                "INSERT INTO items
-                VALUES (1,'armor','Armure en fer brossé', ' ', '/component/img/armure/armure.jpg', '200', '5');
+ /*   $query =    //inserting firstly the armors then the swords, thirdly the spears and finishing by the shields
+                "
                 INSERT INTO items
-                VALUES (2,'armor','Armure en fer brossé', ' ', '/component/img/armure/armure.jpg', '200', '5');
+                VALUES (1,'armor','Armure en fer brossé', ' ', '/component/img/armure/armure.jpg', '200', '8');
                 INSERT INTO items
-                VALUES (3,'armor','Armure en fer brossé', ' ', '/component/img/armure/armure.jpg', '200', '5');
+                VALUES (2,'armor','Armure en fer brossé', ' ', '/component/img/armure/armure.jpg', '150', '5');
                 INSERT INTO items
-                VALUES (4,'armor','Armure en fer brossé', ' ', '/component/img/armure/armure.jpg', '200', '5');
+                VALUES (3,'armor','Armure en fer brossé', ' ', '/component/img/armure/armure.jpg', '100', '4');
+                INSERT INTO items
+                VALUES (4,'armor','Armure en fer brossé', ' ', '/component/img/armure/armure.jpg', '142', '1');
 
                 INSERT INTO items
-                VALUES (5,'sword','Armure en fer brossé', ' ', '/component/img/armure/armure.jpg', '200', '5');
+                VALUES (5,'sword','Armure en fer brossé', ' ', '/component/img/sword/armure.jpg', '123', '12');
                 INSERT INTO items
-                VALUES (6,'sword','Armure en fer brossé', ' ', '/component/img/armure/armure.jpg', '200', '5');
+                VALUES (6,'sword','Armure en fer brossé', ' ', '/component/img/sword/armure.jpg', '452', '1');
                 INSERT INTO items
-                VALUES (7,'sword','Armure en fer brossé', ' ', '/component/img/armure/armure.jpg', '200', '5');
+                VALUES (7,'sword','Armure en fer brossé', ' ', '/component/img/sword/armure.jpg', '210', '4');
                 INSERT INTO items
-                VALUES (8,'sword','Armure en fer brossé', ' ', '/component/img/armure/armure.jpg', '200', '5');
+                VALUES (8,'sword','Armure en fer brossé', ' ', '/component/img/sword/armure.jpg', '150', '7');
 
                 INSERT INTO items
-                VALUES (9,'spear','Armure en fer brossé', ' ', '/component/img/armure/armure.jpg', '200', '5');
+                VALUES (9,'spear','Lance', ' ', '/component/img/spear/armure.jpg', '423', '4');
                 INSERT INTO items
-                VALUES (10,'spear','Armure en fer brossé', ' ', '/component/img/armure/armure.jpg', '200', '5');
+                VALUES (10,'spear','Lance', ' ', '/component/img/spear/armure.jpg', '132', '8');
                 INSERT INTO items
-                VALUES (11,'spear','Armure en fer brossé', ' ', '/component/img/armure/armure.jpg', '200', '5');
+                VALUES (11,'spear','Lance', ' ', '/component/img/spear/armure.jpg', '200', '6');
                 INSERT INTO items
-                VALUES (12,'spear','Armure en fer brossé', ' ', '/component/img/armure/armure.jpg', '200', '5');
+                VALUES (12,'spear','Lance', ' ', '/component/img/spear/armure.jpg', '200', '4');
                                 
                 INSERT INTO items
-                VALUES (13,'shield','Armure en fer brossé', ' ', '/component/img/armure/armure.jpg', '200', '5');
+                VALUES (13,'shield','Bouclier', ' ', '/component/img/shield/Bouclier1.png', '50', '55');
                 INSERT INTO items
-                VALUES (14,'shield','Armure en fer brossé', ' ', '/component/img/armure/armure.jpg', '200', '5');
+                VALUES (14,'shield','Bouclier', ' ', '/component/img/shield/Boulcier2.png', '135', '7');
                 INSERT INTO items 
-                VALUES (15,'shield','Armure en fer brossé', ' ', '/component/img/armure/armure.jpg', '200', '5');
+                VALUES (15,'shield','Bouclier', ' ', '/component/img/shield/armure.jpg', '456', '15');
                 INSERT INTO items
-                VALUES (16,'shield','Armure en fer brossé', ' ', '/component/img/armure/armure.jpg', '200', '5');";
+                VALUES (16,'shield','Bouclier', ' ', '/component/img/shield/armure.jpg', '2000', '4');
+                ";
     
     
     if (!(mysqli_query($mysqli,$query))) {
         die("Error adding the items to the table".$mysqli->connect_errno);
-    }
+    }*/
  //!\ jusque là
 }
 

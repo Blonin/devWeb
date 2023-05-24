@@ -11,14 +11,8 @@ $jobs =$_POST["jobs"];
 $subject =$_POST["subject"];
 $content =$_POST["content"];
 
-//user info
-$host ="localhost";
-$dbname = "message_db";
-$user = "root";
-$password = "";
-
 //connecting to the database mysql and registering the connection to the connect var
-$connect = mysqli_connect($host,$user,$password,$dbname);
+$connect = require __DIR__ . "/database.php";
 
 //if not possible to connect to mysql an error will be printed out
 if (mysqli_connect_error()){
